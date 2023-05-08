@@ -1,0 +1,967 @@
+<!-- 1)design a web page with a form that uses all types of control -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form with All Types of Controls</title>
+</head>
+<body>
+	<h2>Form with All Types of Controls</h2>
+	<form>
+		<label for="text-input">Text Input:</label><br>
+		<input type="text" id="text-input" name="text-input"><br><br>
+		
+		<label for="password-input">Password Input:</label><br>
+		<input type="password" id="password-input" name="password-input"><br><br>
+		
+		<label for="email-input">Email Input:</label><br>
+		<input type="email" id="email-input" name="email-input"><br><br>
+		
+		<label for="number-input">Number Input:</label><br>
+		<input type="number" id="number-input" name="number-input"><br><br>
+		
+		<label for="range-input">Range Input:</label><br>
+		<input type="range" id="range-input" name="range-input" min="0" max="100"><br><br>
+		
+		<label for="date-input">Date Input:</label><br>
+		<input type="date" id="date-input" name="date-input"><br><br>
+		
+		<label for="time-input">Time Input:</label><br>
+		<input type="time" id="time-input" name="time-input"><br><br>
+		
+		<label for="datetime-local-input">Datetime-local Input:</label><br>
+		<input type="datetime-local" id="datetime-local-input" name="datetime-local-input"><br><br>
+		
+		 <label for="color-input">Color Input:</label><br>
+		 <input type="color" id="color-input" name="color-input"><br><br>
+
+		<label for="select-input">Select Input:</label><br>
+		<select id="select-input" name="select-input">
+			<option value="option1">Option 1</option>
+			<option value="option2">Option 2</option>
+			<option value="option3">Option 3</option>
+		</select><br><br>
+		
+		<label for="checkbox-input">Checkbox Input:</label><br>
+		<input type="checkbox" id="checkbox-input" name="checkbox-input"><br><br>
+		
+		<label for="radio-input1">Radio Input 1:</label>
+		<input type="radio" id="radio-input1" name="radio-input" value="radio1"><br>
+		
+		<label for="radio-input2">Radio Input 2:</label>
+		<input type="radio" id="radio-input2" name="radio-input" value="radio2"><br>
+		
+		<label for="textarea">Textarea:</label><br>
+		<textarea id="textarea" name="textarea"></textarea><br><br>
+		
+		<label for="file-input">File Input:</label><br>
+		<input type="file" id="file-input" name="file-input"><br><br>
+		
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 2)write a php code to create database name "FYIT" -->
+
+<?php
+// Database credentials
+$host = "localhost"; // Change this to your host
+$username = "root"; // Change this to your database username
+$password = ""; // Change this to your database password
+
+// Connect to MySQL server
+$conn = mysqli_connect($host, $username, $password);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Create a new database named "FYIT1"
+$sql = "CREATE DATABASE FYIT1";
+if (mysqli_query($conn, $sql)) {
+    echo "Database created successfully";
+} else {
+    echo "Error creating database: " . mysqli_error($conn);
+}
+
+// Close MySQL connection
+mysqli_close($conn);
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 3)write a php program to create a database named "College". Create a table named "Student" with folowing fields(sno, sname, percentage) -->
+
+<?php
+// Database credentials
+$host = "localhost"; // Change this to your host
+$username = "root"; // Change this to your database username
+$password = ""; // Change this to your database password
+$dbname = "College"; // Name of the database you want to create
+
+// Connect to MySQL server
+$conn = mysqli_connect($host, $username, $password);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Create a new database named "College"
+$sql = "CREATE DATABASE IF NOT EXISTS $dbname";
+if (mysqli_query($conn, $sql)) {
+    echo "Database created successfully";
+} else {
+    echo "Error creating database: " . mysqli_error($conn);
+}
+
+// Select the "College" database
+mysqli_select_db($conn, $dbname);
+
+// Create a new table named "Student"
+$sql = "CREATE TABLE IF NOT EXISTS Student (
+    sno INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    sname VARCHAR(50) NOT NULL,
+    percentage FLOAT(5,2) NOT NULL
+)";
+if (mysqli_query($conn, $sql)) {
+    echo "Table created successfully";
+} else {
+    echo "Error creating table: " . mysqli_error($conn);
+}
+
+// Close MySQL connection
+mysqli_close($conn);
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 4)write a php program to print "Hello World" -->
+
+<?php
+echo "Hello World!";
+?>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 5)design a web page using a different formatting tags  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Page with Text Formatting Tags</title>
+</head>
+<body>
+	<h1>Text Formatting Tags</h1>
+
+	<p><strong>Bold Text:</strong> This text is bold.</p>
+
+	<p><em>Italic Text:</em> This text is italic.</p>
+
+	<p><u>Underlined Text:</u> This text is underlined.</p>
+
+	<p><del>Strikethrough Text:</del> This text is strikethrough.</p>
+
+	<p><mark>Highlighted Text:</mark> This text is highlighted.</p>
+
+	<p><small>Small Text:</small> This text is small.</p>
+
+	<p><sup>Superscript Text:</sup> This text is superscript.</p>
+
+	<p><sub>Subscript Text:</sub> This text is subscript.</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 6)write a php code to create :
+create a database"College"
+create a table department (Dno,Dname,Number_Of_faculty) -->
+
+<?php
+// Database credentials
+$host = "localhost"; // Change this to your host
+$username = "root"; // Change this to your database username
+$password = ""; // Change this to your database password
+$dbname = "College"; // Name of the database you want to create
+
+// Connect to MySQL server
+$conn = mysqli_connect($host, $username, $password);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Create a new database named "College"
+$sql = "CREATE DATABASE IF NOT EXISTS $dbname";
+if (mysqli_query($conn, $sql)) {
+    echo "Database created successfully";
+} else {
+    echo "Error creating database: " . mysqli_error($conn);
+}
+
+// Select the "College" database
+mysqli_select_db($conn, $dbname);
+
+// Create a new table named "Department"
+$sql = "CREATE TABLE IF NOT EXISTS Department (
+    Dno INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    Dname VARCHAR(50) NOT NULL,
+    Number_Of_Faculty INT(6) NOT NULL
+)";
+if (mysqli_query($conn, $sql)) {
+    echo "Table created successfully";
+} else {
+    echo "Error creating table: " . mysqli_error($conn);
+}
+
+// Close MySQL connection
+mysqli_close($conn);
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 7)create a web page which accepts username, password, dateofbirth ,gender and when user clicks submit button display"Welcome"message -->
+<!-- prac7.html -->
+<!-- prac7.php -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+</head>
+<body>
+	<h1>Registration Form</h1>
+
+	<form action="prac7.php" method="POST">
+		<label for="username">Username:</label>
+		<input type="text" name="username" id="username" required><br><br>
+
+		<label for="password">Password:</label>
+		<input type="password" name="password" id="password" required><br><br>
+
+		<label for="dob">Date of Birth:</label>
+		<input type="date" name="dob" id="dob" required><br><br>
+
+		<label for="gender">Gender:</label>
+		<input type="radio" name="gender" value="male" id="gender-male" required>
+		<label for="gender-male">Male</label>
+		<input type="radio" name="gender" value="female" id="gender-female">
+		<label for="gender-female">Female</label><br><br>
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- same practical php code  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+</head>
+<body>
+	<h1>Welcome</h1>
+
+	<p>Thank you for registering!</p>
+
+	<?php
+	// Retrieve form data
+	$username = $_POST["username"];
+	$dob = $_POST["dob"];
+	$gender = $_POST["gender"];
+
+	// Display user information
+	echo "<p>Username: $username</p>";
+	echo "<p>Date of Birth: $dob</p>";
+	echo "<p>Gender: $gender</p>";
+	?>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--8)write php program to display multiplication of two numbers -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multiplication</title>
+</head>
+<body>
+	<h1>Multiplication</h1>
+
+	<form action="" method="POST">
+		<label for="num1">Number 1:</label>
+		<input type="number" name="num1" id="num1" required><br><br>
+
+		<label for="num2">Number 2:</label>
+		<input type="number" name="num2" id="num2" required><br><br>
+
+		<input type="submit" name="submit" value="Multiply">
+	</form>
+
+	<?php
+	if (isset($_POST["submit"])) {
+		$num1 = $_POST["num1"];
+		$num2 = $_POST["num2"];
+		$product = $num1 * $num2;
+
+		echo "<p>The product of $num1 and $num2 is $product</p>";
+	}
+	?>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 9)design a static web page with all basic tags  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Web Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		/* Add some basic styles */
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f2f2f2;
+		}
+
+		h1 {
+			color: #00539c;
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 1.5;
+			margin: 20px 0;
+			text-align: justify;
+			padding: 0 20px;
+		}
+
+		a {
+			color: #00539c;
+			text-decoration: none;
+		}
+
+		img {
+			display: block;
+			margin: auto;
+			max-width: 100%;
+			height: auto;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>My Web Page</h1>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<section>
+			<h2>Welcome to My Web Page</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend, libero a tincidunt ultrices, tellus eros sodales turpis, a feugiat odio tellus vel tortor. Integer sed turpis quis justo vestibulum bibendum at sit amet ex.</p>
+			<p>Aliquam consectetur, lectus eu aliquet feugiat, eros arcu blandit ex, vel vehicula felis nulla vel quam. Sed sollicitudin purus quis metus elementum viverra. Vivamus sit amet nulla bibendum, convallis velit non, scelerisque ex. Aenean dapibus ultricies mauris non lobortis.</p>
+			<p>Nunc eget tortor nec sapien euismod dapibus. Aenean ac magna ipsum. Sed non tellus a ante pretium dignissim. Nam vitae velit nec risus porttitor blandit. Curabitur pellentesque elit a leo elementum, quis blandit enim hendrerit. Sed molestie interdum mi, a imperdiet velit bibendum a. Sed euismod faucibus felis, id congue nulla bibendum a. Nulla quis massa in arcu fermentum vulputate eget quis risus.</p>
+			<img src="https://via.placeholder.com/500x250" alt="Placeholder Image">
+			<p>Morbi dictum tortor et justo pellentesque commodo. Nullam nec arcu eu arcu placerat suscipit. Suspendisse ac dui vel tellus consequat vestibulum ut a dolor. Suspendisse potenti. Ut maximus vehicula ex eu luctus. Fusce hendrerit consectetur odio, vitae bibendum ex rutrum quis. Fusce interdum quis mi eget consequat. Sed ac velit non nibh maximus ultricies. Vivamus quis mi vestibulum, vestibulum lacus at, eleifend mauris. Duis malesuada mauris vel tellus viv
+            </section>
+
+            <section>
+                <h2>About Me</h2>
+                <p>My name is John Doe and I am a web developer. I have been working in the industry for over 5 years and have experience with HTML, CSS, JavaScript, PHP, and more. In my free time, I enjoy hiking and playing guitar.</p>
+                <p>If you would like to get in touch with me, please feel free to send me an email at <a href="mailto:john.doe@email.com">john.doe@email.com</a>.</p>
+            </section>
+        
+            <section>
+                <h2>Contact Me</h2>
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+        
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2023 My Web Page</p>
+        </footer>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 10)create a database IT_department, create a table student,Insert 3 records into student table . For eg.(stud_id,stud_name,stud_dept) -->
+
+<?php
+// Create a connection to MySQL
+// $conn = mysqli_connect("localhost", "root", "password123");
+$conn = mysqli_connect("localhost", "root", "");
+
+
+// Check for connection errors
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+// Create the database
+$sql = "CREATE DATABASE IT_department";
+if (mysqli_query($conn, $sql)) {
+  echo "Database created successfully";
+} else {
+  echo "Error creating database: " . mysqli_error($conn);
+}
+
+// Select the database
+mysqli_select_db($conn, "IT_department");
+
+// Create the table
+$sql = "CREATE TABLE student (
+  stud_id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  stud_name VARCHAR(50) NOT NULL,
+  stud_dept VARCHAR(50) NOT NULL
+)";
+if (mysqli_query($conn, $sql)) {
+  echo "Table student created successfully";
+} else {
+  echo "Error creating table: " . mysqli_error($conn);
+}
+
+// Insert three records into the table
+$sql = "INSERT INTO student (stud_name, stud_dept) VALUES
+  ('John Doe', 'IT'),
+  ('Jane Smith', 'CSE'),
+  ('Bob Johnson', 'ECE')";
+if (mysqli_query($conn, $sql)) {
+  echo "Records inserted successfully";
+} else {
+  echo "Error inserting records: " . mysqli_error($conn);
+}
+
+// Close the connection
+mysqli_close($conn);
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 11)design a web page with following details
+a) First name 
+b) Last name 
+c) Mobile no 
+d) Password 
+e) Email 
+apply javascript validation for each field 
+d) Field should not be empty 
+e) Email should containg @character 
+f) Mobile no should be 10 digits  -->
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <script>
+      function validateForm() {
+        var firstName = document.forms["myForm"]["fname"].value;
+        var lastName = document.forms["myForm"]["lname"].value;
+        var mobile = document.forms["myForm"]["mobile"].value;
+        var password = document.forms["myForm"]["password"].value;
+        var email = document.forms["myForm"]["email"].value;
+
+        if (firstName == "" || lastName == "" || mobile == "" || password == "" || email == "") {
+          alert("Please fill all the fields");
+          return false;
+        }
+
+        if (email.indexOf("@") == -1) {
+          alert("Please enter a valid email address");
+          return false;
+        }
+
+        if (mobile.length != 10) {
+          alert("Mobile number should be 10 digits");
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Registration Form</h2>
+    <form name="myForm" onsubmit="return validateForm()" method="post">
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname"><br>
+
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lname"><br>
+
+      <label for="mobile">Mobile No:</label>
+      <input type="text" id="mobile" name="mobile"><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br>
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email"><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 12)design a web page using different text formatting tags -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Page with Text Formatting Tags</title>
+</head>
+<body>
+	<h1>Text Formatting Tags</h1>
+
+	<p><strong>Bold Text:</strong> This text is bold.</p>
+
+	<p><em>Italic Text:</em> This text is italic.</p>
+
+	<p><u>Underlined Text:</u> This text is underlined.</p>
+
+	<p><del>Strikethrough Text:</del> This text is strikethrough.</p>
+
+	<p><mark>Highlighted Text:</mark> This text is highlighted.</p>
+
+	<p><small>Small Text:</small> This text is small.</p>
+
+	<p><sup>Superscript Text:</sup> This text is superscript.</p>
+
+	<p><sub>Subscript Text:</sub> This text is subscript.</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 13)write a PHP program to create a database named "Company". Create a table named "employee" with following fields (eno, ename, e_age) -->
+
+<?php
+// Establish a connection with the MySQL server
+$servername = "localhost";
+$username = "your_username";
+$password = "your_password";
+
+// Create a connection
+$conn = mysqli_connect("localhost", "root", "");
+
+// Check if the connection is successful
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+// Create the database
+$sql = "CREATE DATABASE Company";
+if (mysqli_query($conn, $sql)) {
+  echo "Database created successfully<br>";
+} else {
+  echo "Error creating database: " . mysqli_error($conn) . "<br>";
+}
+
+// Select the database
+mysqli_select_db($conn, "Company");
+
+// Create the employee table
+$sql = "CREATE TABLE employee (
+  eno INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  ename VARCHAR(30) NOT NULL,
+  e_age INT(3) NOT NULL
+)";
+
+if (mysqli_query($conn, $sql)) {
+  echo "Table employee created successfully<br>";
+} else {
+  echo "Error creating table: " . mysqli_error($conn) . "<br>";
+}
+
+// Close the database connection
+mysqli_close($conn);
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 14)design a web page using different text formatting tags  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Page with Text Formatting Tags</title>
+</head>
+<body>
+	<h1>Text Formatting Tags</h1>
+
+	<p><strong>Bold Text:</strong> This text is bold.</p>
+
+	<p><em>Italic Text:</em> This text is italic.</p>
+
+	<p><u>Underlined Text:</u> This text is underlined.</p>
+
+	<p><del>Strikethrough Text:</del> This text is strikethrough.</p>
+
+	<p><mark>Highlighted Text:</mark> This text is highlighted.</p>
+
+	<p><small>Small Text:</small> This text is small.</p>
+
+	<p><sup>Superscript Text:</sup> This text is superscript.</p>
+
+	<p><sub>Subscript Text:</sub> This text is subscript.</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 15)design a web page using different text formatting tags --> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Page with Text Formatting Tags</title>
+</head>
+<body>
+	<h1>Text Formatting Tags</h1>
+
+	<p><strong>Bold Text:</strong> This text is bold.</p>
+
+	<p><em>Italic Text:</em> This text is italic.</p>
+
+	<p><u>Underlined Text:</u> This text is underlined.</p>
+
+	<p><del>Strikethrough Text:</del> This text is strikethrough.</p>
+
+	<p><mark>Highlighted Text:</mark> This text is highlighted.</p>
+
+	<p><small>Small Text:</small> This text is small.</p>
+
+	<p><sup>Superscript Text:</sup> This text is superscript.</p>
+
+	<p><sub>Subscript Text:</sub> This text is subscript.</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 16)Write a PHP code to create 
+Create a database "College"
+Create a table Department (Dno, Dname, Number_Of_faculty) -->
+
+<?php
+// Establish a connection with the MySQL server
+$servername = "localhost";
+$username = "your_username";
+$password = "your_password";
+
+// Create a connection
+$conn = mysqli_connect("localhost", "root", "");
+
+// Check if the connection is successful
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+// Create the database
+$sql = "CREATE DATABASE College";
+if (mysqli_query($conn, $sql)) {
+  echo "Database created successfully<br>";
+} else {
+  echo "Error creating database: " . mysqli_error($conn) . "<br>";
+}
+
+// Select the database
+mysqli_select_db($conn, "College");
+
+// Create the Department table
+$sql = "CREATE TABLE Department (
+  Dno INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  Dname VARCHAR(30) NOT NULL,
+  Number_Of_faculty INT(3) NOT NULL
+)";
+
+if (mysqli_query($conn, $sql)) {
+  echo "Table Department created successfully<br>";
+} else {
+  echo "Error creating table: " . mysqli_error($conn) . "<br>";
+}
+
+// Close the database connection
+mysqli_close($conn);
+?>
